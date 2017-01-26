@@ -9,8 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class DeleteActivity extends AppCompatActivity {
-    EditText editText;
-    Button button;
+   private EditText editText;
+   private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,10 @@ public class DeleteActivity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(),"Sorry Sir! I am a failure", Toast.LENGTH_LONG).show();
+                    Intent intent=getIntent();
+                    String name=editText.getText().toString();
+                    intent.putExtra("name",name);
+                    setResult(RESULT_OK,intent);
                     finish();
 
 

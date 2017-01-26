@@ -10,8 +10,8 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class AddActivity extends AppCompatActivity {
-    EditText editText;
-    Button button;
+    private EditText editText;
+     private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
